@@ -60,3 +60,8 @@
 
 
 ### Master Process
+1. Commands and queries come into apiserver via kubectl command line tool
+2. Commands get authenticated and authorized
+3. Desired state get stored as record of intent at etcd cluster store
+4. Schedular forms the work out to nodes in the cluster
+5. Controlers sitting in watch loops observing state of cluster make sure that is with desired state.
